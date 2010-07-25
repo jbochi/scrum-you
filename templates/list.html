@@ -18,8 +18,8 @@
 	{% endfor %}
 
     <form action="" method="post">
-        <input type="text" name="name" id="new_task"></input>
-        <input type="submit" value="add"></input>
+        <input autocomplete="off" type="text" name="name" id="new_task" />
+        <input type="submit" value="add" />
     </form>
     
     <ul id="todo">
@@ -40,7 +40,5 @@
         </li>
     {% endfor %}
     </ul>
-    
-    </div>
 </body>
 </html>
