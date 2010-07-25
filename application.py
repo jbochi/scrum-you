@@ -54,7 +54,7 @@ def complete():
     task = Task.get_by_id(id)
     if task and task.user == users.get_current_user():
         completed = request.form['completed']
-        if completed:
+        if completed == 'true':
             task.completed_on = datetime.now()
         else:
             task.completed_on = None

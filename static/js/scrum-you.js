@@ -25,8 +25,7 @@ function completeTask(id, completed) {
 	} else {
 		span_tag.removeClass('completed');
 	}
-	completion_date = completed ? new Date().getTime() : null;
-	$.post('/complete/', {'id': id, 'completed': completion_date});
+	$.post('/complete/', {'id': id, 'completed': completed});
 }
 
 function editTask(id, name) {
