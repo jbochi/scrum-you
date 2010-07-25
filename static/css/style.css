@@ -1,0 +1,106 @@
+body {
+	font-size:62.5%;
+}
+
+p {
+	font-size: 1.4em;
+}
+
+#new_task {
+	margin-left: 40px;
+	margin-bottom: 20px;
+	width: 200px;
+}
+
+#addTask {
+    margin-top: 8px;
+    margin-left: 45px; 
+    width: 30em;
+}
+
+#tags {
+	font-size: 1.4em;
+}
+
+#tags ul {
+	padding-left: 20px;
+}
+
+
+#todo {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 600px;
+}
+
+#todo li {
+	margin: 0 3px 3px 3px; 
+	padding: 0.4em; 
+	padding-left: 1.5em; 
+	font-size: 1.6em;
+	height: 18px; 
+}
+
+#todo li:hover {
+	background-color: #F7F7F7;
+}
+
+#todo li span.actions { 
+	float: right;
+	visibility: hidden;
+}
+
+#todo li:hover span.actions {
+	visibility: visible;
+}	
+
+#todo li span.handle {
+	position: absolute;
+	margin-left: -1.3em;
+	cursor: move;
+	visibility: hidden;
+}
+
+#todo li:hover span.handle {
+	visibility: visible;
+}
+
+#todo li span.actions a {
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+	cursor:pointer;
+	display:block;
+	outline-color:-moz-use-text-color;
+	outline-style:none;
+	outline-width:medium;
+	padding: 8px 8px;
+	text-decoration:none;
+}
+	
+#todo li span.actions .del {
+	background-image:url(../img/icon_trash.gif);
+}	
+
+#todo li .taskName {
+	display: inline;
+}
+
+#todo li .taskName:hover {
+	background-color: #E1E1E1;
+}
+
+#todo li .completed {
+	text-decoration: line-through;
+}
+
+.ui-icon-arrowthick-2-n-s {
+	background-position:-128px -48px;
+	background-image:url(../img/ui-icons_222222_256x240.png);
+	height:16px;
+	width:16px;
+	background-repeat:no-repeat;
+	display:block;
+	overflow:hidden;
+	text-indent:-99999px;
+}
