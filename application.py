@@ -4,7 +4,7 @@ app = Flask(__name__)
 from datetime import datetime
 import time
 
-from flask import abort, redirect, render_template, request, url_for, \
+from flask import abort, jsonify, redirect, render_template, request, url_for, \
                   flash, get_flashed_messages
 from google.appengine.ext import db
 from google.appengine.api import users
@@ -59,7 +59,7 @@ def complete():
         else:
             task.completed_on = None
         task.save()
-        return "1"
+        return jsonify(result=True)
     else:
         abort(404)
 
@@ -72,7 +72,7 @@ def edit():
         if name:
             task.name = name
             task.save()
-            return "1"
+            return jsonify(result=True)
     else:
         abort(404)
 
@@ -84,7 +84,7 @@ def update_order():
         order = request.form['order']
         task.order = datetime.fromtimestamp(long(order)/1000)
         task.save()
-        return "1"
+        return jsonify(result=True)
     else:
         abort(404)
 
@@ -94,7 +94,7 @@ def delete():
     task = Task.get_by_id(id)
     if task and task.user == users.get_current_user():
         task.delete()
-        return "1"
+        return jsonify(result=True)
     else:
         abort(404)
 
